@@ -1,0 +1,2 @@
+#! /bin/bash
+exec /opt/${D_FRAMEWORK,,}/bin/node $@
