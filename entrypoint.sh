@@ -10,7 +10,7 @@ if [[ ${D_FRAMEWORK,,} == "python3" ]]; then
   if [[ -f requirements.txt ]]; then
     pip install -r requirements.txt
   fi
-  exec "python $@"
+  exec "python3 $@"
 fi
 
 if [[ ${D_FRAMEWORK,,} == "python2" ]]; then
