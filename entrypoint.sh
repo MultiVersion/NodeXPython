@@ -19,3 +19,4 @@ if [[ ${D_FRAMEWORK,,} == "python2" ]]; then
   fi
   exec "python2 $@"
 fi
+exit 1
