@@ -14,9 +14,8 @@ ADD ./shell/npx /usr/bin/npx
 RUN \
   chmod +x /usr/bin/node && \
   chmod +x /usr/bin/npm && \
-  chmod +x /usr/bin/npx
-
-RUN adduser --disabled-password --home /home/container container
+  chmod +x /usr/bin/npx && \
+  adduser --disabled-password --home /home/container container
 USER container
 ENV  USER=container HOME=/home/container PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
