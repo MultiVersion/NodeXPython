@@ -7,6 +7,9 @@ ADD ./nodejs/nodejs12.tar.gz /opt/nodejs12
 ADD ./nodejs/nodejs14.tar.gz /opt/nodejs14
 ADD ./nodejs/nodejs16.tar.gz /opt/nodejs16
 
+# | Entrypoint
+ADD ./entrypoint.sh /entrypoint.sh
+
 # | Framework
 ADD ./shell/node /usr/bin/node
 ADD ./shell/npm /usr/bin/npm
@@ -15,6 +18,7 @@ RUN \
   chmod +x /usr/bin/node && \
   chmod +x /usr/bin/npm && \
   chmod +x /usr/bin/npx && \
+  chmod +x /entrypoint.sh && \
   adduser --disabled-password --home /home/container container
 USER container
 ENV  USER=container HOME=/home/container PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
