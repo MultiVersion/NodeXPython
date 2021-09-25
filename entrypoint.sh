@@ -1,5 +1,6 @@
 #! /bin/bash
-echo "MultiVersion 21.08 LTS | github.com/MultiVersion"
+cd /home/container
+echo "MultiVersion 21.09 | github.com/MultiVersion"
 if [[ ${D_FRAMEWORK,,} == "nodejs*" ]]; then
     if [[ ! -d node_modules ]]; then
       npm install
