@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.14.2
 LABEL org.opencontainers.image.source="https://github.com/MultiVersion/nodexpython" org.opencontainers.image.source="https://multiversion.dviih.technology/" org.opencontainers.image.version="21.09" org.opencontainers.image.revision="Rolling" org.opencontainers.image.authors="Dviih" org.opencontainers.image.licenses="unlicense.org"
 RUN apk add --update --no-cache bash python2 python3 py-pip libstdc++ gcc g++ make
 
