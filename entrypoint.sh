@@ -6,7 +6,7 @@ if [[ -z $D_FILE || -z $D_FRAMEWORK ]]; then
   echo "You missed one of variables who nodexpython image needs!"
 fi
 
-if [[ -z D_DISABLE_SMART ]]; then
+if [[ -z $D_DISABLE_SMART ]]; then
   if [[ ${D_FRAMEWORK,,} == "nodejs*" && ! -d node_modules && -f package.json ]]; then
     npm install
   fi
